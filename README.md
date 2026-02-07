@@ -65,6 +65,51 @@ yellowpages-canada-leads/
 
 ---
 
+## Pipeline Architecture (How the System Works)
+
+This project is organized as a modular data pipeline. Each stage performs a single responsibility and passes clean data to the next stage.
+
+### 1. Scraping Layer
+**Location:** `src/scraping/`
+
+- Collects business listings from YellowPages Canada
+- Navigates category and subcategory pages
+- Handles pagination, retries, and unstable responses
+- Outputs raw but structured lead data
+
+### 2. Cleaning & Validation Layer
+**Location:** `src/cleaning/`
+
+- Removes invalid rows (error pages, empty listings)
+- Standardizes phone number formats
+- Filters incomplete records (missing phone and address)
+- Ensures data quality before merging
+
+### 3. Merging & Replacement Layer
+**Location:** `src/merging/`
+
+- Allows individual categories to be re-scraped independently
+- Replaces only the affected category in the master dataset
+- Prevents unnecessary full re-runs of the pipeline
+- Deduplicates records during merge operations
+
+### 4. Shared Utilities
+**Location:** `src/utils/`
+
+- Centralized helper functions used across the pipeline
+- Reduces duplicated logic
+- Ensures consistent behavior across scripts
+
+### 5. Output Layer
+**Location:** `data/`
+
+- `data/final/` contains cleaned, sales-ready datasets
+- `data/samples/` contains balanced samples for review or demos
+
+This architecture makes the pipeline reusable, auditable, and easy to extend to new categories or locations.
+
+---
+
 ## Technologies Used
 
 - **Python** — core automation and data processing
