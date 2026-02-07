@@ -47,21 +47,22 @@ The pipeline performs the following steps:
 ---
 
 ## Project Structure
-
+```
 yellowpages-canada-leads/
 │
 ├── data/
-│ ├── final/ # Final cleaned lead datasets
-│ └── samples/ # Balanced sample files for review/demo
+│     ├── final/ # Final cleaned lead datasets
+│     └── samples/ # Balanced sample files for review/demo
 │
 ├── src/
-│ ├── scraping/ # Web scraping and recovery scripts
-│ ├── cleaning/ # Validation, normalization, and filtering
-│ ├── merging/ # Category replacement and master merges
-│ └── utils/ # Shared helper functions
+│     ├── scraping/ # Web scraping and recovery scripts
+│     ├── cleaning/ # Validation, normalization, and filtering
+│     ├── merging/ # Category replacement and master merges
+│     └── utils/ # Shared helper functions
 │
 ├── requirements.txt
 └── README.md
+```
 
 ---
 
