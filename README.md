@@ -133,20 +133,73 @@ This architecture makes the pipeline reusable, auditable, and easy to extend to 
 
 ---
 
-## How to Run (High Level)
+## How to Run This Project
 
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
+This project is designed to be run as a modular pipeline. You can run individual steps independently depending on your needs.
 
-2. Run a category scrape:
+### Prerequisites
 
-python src/scraping/recovery_category_scraper.py
+- Python 3.10+
+- Google Chrome (required for Selenium)
+- Git installed
 
-3. Clean and validate data:
+Install required Python packages:
 
-python src/cleaning/hard_validation_filters.py
+```bash
+pip install -r requirements.txt
 
-4. Merge cleaned data into the master dataset:
 
-python src/merging/replace_category_in_master_and_merge_FAST.py
+#Step 1: Scrape YellowPages Data
+
+To scrape a category or recover a specific category:
+
+   python src/scraping/recovery_category_scraper.py
+
+
+This script:
+
+- Navigates YellowPages category and subcategory pages
+
+- Collects business name, address, phone number, and category metadata
+
+- Handles pagination and temporary site errors
+
+#Step 2: Clean and Validate Data
+
+Run validation and normalization checks:
+
+   python src/cleaning/hard_validation_filters.py
+
+
+This step:
+
+- Removes invalid or error listings
+
+- Standardizes phone number formats
+
+- Removes incomplete records
+
+- Ensures the dataset is sales-ready
+
+#Step 3: Merge or Replace Categories in the Master Dataset
+
+To replace a single category in the master file without re-running the full pipeline:
+
+   python src/merging/replace_category_in_master_and_merge_FAST.py
+
+
+This allows:
+
+- Targeted re-scraping of problematic categories
+
+- Safe replacement without duplicating data
+
+- Efficient updates to large datasets
+
+Sample Data
+
+A small, balanced sample dataset is included in:
+
+   data/samples/leads_sample_100.xlsx
+
+This file demonstrates the final structure and formatting of the cleaned output without exposing full production data.
