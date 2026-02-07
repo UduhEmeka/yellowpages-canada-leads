@@ -1,24 +1,7 @@
-# Python
-__pycache__/
-*.pyc
-*.pyo
-*.pyd
-.venv/
-venv/
-.env
-
-# OS / IDE
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# Excel / outputs (do NOT commit full leads)
+# Ignore full production datasets
+data/final/
 *.xlsx
-*.xls
-outputs/
-data/raw/
-data/clean/
 
-# Logs
-*.log
+# Allow sample files explicitly
+!data/samples/
+!data/samples/*.xlsx
