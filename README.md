@@ -121,15 +121,22 @@ This architecture makes the pipeline reusable, auditable, and easy to extend to 
 
 ## Results & Impact
 
-- Successfully collected and cleaned **4,465 business leads**
-- Covered multiple industries including:
+- Automated a previously manual lead-collection process that required producing **100 leads per day**
+- Built a repeatable pipeline that collected, cleaned, and structured **4,465 sales-ready business leads**
+- Covered multiple high-value industries, including:
   - Business & Professional Services
   - Food & Beverages
   - Health & Medicine
   - Automotive
   - Transportation
-- Reduced a fully manual process into a repeatable automated workflow
-- Produced sales-ready Excel files suitable for immediate outreach
+- Improved data quality by:
+  - Removing invalid listings and server-error pages
+  - Standardizing phone number formats
+  - Eliminating duplicates across categories
+- Reduced manual effort and turnaround time for sales preparation
+- Delivered Excel-based outputs that could be immediately used by non-technical sales teams
+
+This project demonstrates practical automation, data engineering fundamentals, and business-focused problem solving in a real operational context.
 
 ---
 
