@@ -152,16 +152,16 @@ This project is designed to be run as a modular pipeline. You can run individual
 - Git installed
 
 Install required Python packages:
-
+```
    pip install -r requirements.txt
-
+```
 
 #Step 1: Scrape YellowPages Data
 
 To scrape a category or recover a specific category:
-
+```
    python src/scraping/recovery_category_scraper.py
-
+```
 
 This script:
 
@@ -174,9 +174,9 @@ This script:
 #Step 2: Clean and Validate Data
 
 Run validation and normalization checks:
-
+```
    python src/cleaning/hard_validation_filters.py
-
+```
 
 This step:
 
@@ -191,9 +191,9 @@ This step:
 #Step 3: Merge or Replace Categories in the Master Dataset
 
 To replace a single category in the master file without re-running the full pipeline:
-
+```
    python src/merging/replace_category_in_master_and_merge_FAST.py
-
+```
 
 This allows:
 
@@ -206,7 +206,7 @@ This allows:
 Sample Data
 
 A small, balanced sample dataset is included in:
-
+```
    data/samples/leads_sample_100.xlsx
-
+```
 This file demonstrates the final structure and formatting of the cleaned output without exposing full production data.
