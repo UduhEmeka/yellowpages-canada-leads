@@ -1,5 +1,5 @@
 import pandas as pd
-from src.utils.yp_shared import is_error_company_name, normalize_phone
+from utils.yp_shared import is_error_company_name, normalize_phone
 
 INPUT_FILE = r"C:\Users\uduhe\OneDrive\Desktop\Leads_ALL_COMBINED.xlsx"
 OUTPUT_FILE = r"C:\Users\uduhe\OneDrive\Desktop\Leads_ALL_COMBINED_VALIDATED.xlsx"

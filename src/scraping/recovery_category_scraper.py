@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
-from src.utils.yp_shared import (
+from utils.yp_shared import (
     CategoryJob,
     fetch_html,
     soup,
