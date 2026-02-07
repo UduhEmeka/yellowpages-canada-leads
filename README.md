@@ -152,8 +152,7 @@ This project is designed to be run as a modular pipeline. You can run individual
 
 Install required Python packages:
 
-```bash
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
 
 #Step 1: Scrape YellowPages Data
